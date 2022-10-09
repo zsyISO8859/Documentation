@@ -1,0 +1,22 @@
+nacos：
+查看集群数量 ps -ef|grep nacos|grep -v grep|wc -l
+
+nginx：
+重启nginx  ./nginx -t  (到sbin目录下)
+
+系统：
+top     查看进程
+df -h   查看磁盘使用情况
+free -h 查看内容情况
+ps -ef|grep redis  查看程序启动情况
+kill -9 14981  根据pid杀死进程
+tar -zxvf /usr/local/redis.gz   解压文件
+
+防火墙：
+firewall-cmd --zone=public --add-port=8080/tcp --permanent   开放端口
+firewall-cmd --zone=public --list-ports   查看开放的端口
+systemctl restart firewalld   重启防火墙
+
+
+
+ 

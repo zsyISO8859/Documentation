@@ -1,0 +1,28 @@
+1.分支操作代码
+创建
+git checkout -b dev   或者  git branch dev
+git push -u origin dev  //第一次要用-u 以后不需要
+删除
+git branch -d dev
+查看
+git branch
+
+2.切换到本地 dev分支
+git checkout dev
+
+3.删除文件(本地不删除 删除仓库)
+git rm --cached main.c
+//git add main.c 此命令回滚删除
+git commit -m "删除文件"
+git push
+
+
+4.从远程获取代码并合并本地的版本
+git pull 
+
+5.Git 将指定文件恢复指定版本
+git log demo.java
+git checkout 0fb5c392938577a2d217de7f3186f22b8b7955fd demo.java
+
+6.合并代码(分支合并主干)
+git merge main
