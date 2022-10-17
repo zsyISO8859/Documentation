@@ -9,6 +9,7 @@ top     查看进程
 df -h   查看磁盘使用情况
 free -h 查看内容情况
 ps -ef|grep redis  查看程序启动情况
+ps H -eo pid,tid,%cpu | grep 进程id  使用ps命令定位哪个线程的cpu占用过高
 kill -9 14981  根据pid杀死进程
 tar -zxvf /usr/local/redis.gz   解压文件
 
@@ -17,6 +18,8 @@ firewall-cmd --zone=public --add-port=8080/tcp --permanent   开放端口
 firewall-cmd --zone=public --list-ports   查看开放的端口
 systemctl restart firewalld   重启防火墙
 
+java:
+jstack 进程id  可以将进程id转换成16进制进一步定位问题的行号
 
 
  
